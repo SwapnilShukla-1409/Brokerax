@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.styleCarousel {
+  display: flex;
+  align-items: center;
+  background-image: url("../Code//CraouselBG.png");
+  background-color: #212224;
+  height: 90vh;
+  background-repeat: no-repeat;
+}
+.logoResponse {
+  height: 30vw;
+}
+
+.card-1 {
+  padding: 20px;
+  display: flex;
+  color: white;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 90vh;
+  position: relative;
+}
+.Home-slider h1 {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  margin: 0 0 20px 0;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+.Home-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sliderp {
+  margin: 10px;
+  font-size: 1.3vw;
+  color: #d9d9d9;
+  font-family: "Roboto", sans-serif;
+}
+@media all and (max-width: 800px) {
+  .Home-slider {
+    flex-direction: column;
+  }
+  .Home-slider h1 {
+    font-size: 5vw;
+  }
+  #sliderp {
+    font-size: 2vw;
+  }
+  .logoResponse {
+    height: 70vw;
+  }
+}

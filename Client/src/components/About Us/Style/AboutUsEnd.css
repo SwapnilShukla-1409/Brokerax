@@ -1,0 +1,41 @@
+.End-container-1 {
+  background-image: url("http://demo.themenio.com/finance/image/plx-cta.jpg");
+  margin-bottom: -10vh;
+  height: 20vh;
+}
+
+.container-2 {
+  background: #ff9d8c;
+  height: 20vh;
+}
+
+.end-flex-container {
+  height: 25vh;
+  display: flex;
+  position: relative;
+  top: 5vh;
+  font-size: 1.3vw; /* Updated to viewport unit */
+  justify-content: space-around;
+  align-content: center;
+  color: white;
+}
+
+.contactBtn {
+  display: flex;
+  justify-content: center;
+  color: #fc5b3f;
+  align-items: center;
+  background-color: black;
+  border-color: black;
+  font-size: 1.4vw; /* Updated to viewport unit */
+  letter-spacing: 0.1vw; /* Updated to viewport unit */
+  text-transform: uppercase;
+  height: 6vw;
+  text-decoration: none;
+  width: 12vw;
+  border-radius: 45px;
+}
+.contactBtn:hover {
+  color: black;
+  background-color: #fc5b3f;
+}

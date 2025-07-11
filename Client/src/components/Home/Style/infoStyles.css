@@ -1,0 +1,182 @@
+/* reset css */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap");
+.bg-news {
+  font-family: "Roboto Mono", monospace;
+}
+.info-detail {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  line-height: 1;
+}
+.tempos {
+  padding: 0rem 1.5rem;
+  min-height: 40vh;
+}
+.tempo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  height: 340px;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.tempo-one {
+  background-image: url(" https://source.unsplash.com/1600x500/?stock");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+.tempo-two {
+  background-image: url(" https://source.unsplash.com/1600x500/?bitcoin");
+  background-size: cover;
+  background-position: center;
+}
+.tempo-three {
+  background-image: url(" https://source.unsplash.com/1600x500/?funds");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+}
+
+.tempo-four {
+  background-image: url(" https://source.unsplash.com/1600x500/?bonds");
+  background-size: cover;
+  background-position: center;
+}
+
+/* top */
+.top {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+
+.actions i {
+  margin-left: 0.5em;
+  transition: transform 200ms ease-in-out;
+}
+
+.actions i:hover {
+  cursor: pointer;
+  transform: scale(1.2) translatey(-0.2em);
+}
+
+/* bottom */
+.bottom {
+  position: relative;
+  z-index: 1;
+  transform: translateY(40%);
+  transition: transform 500ms ease;
+}
+
+.bottom::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: -1em;
+  left: -1em;
+  right: 0;
+  width: calc(100% + 2rem);
+  height: calc(100% + 5rem);
+  background: linear-gradient(to top, rgba(0 0 0 / 0.9), rgba(0 0 0 / 0));
+}
+
+.bottom:hover,
+.bottom:hover::after {
+  transform: translateY(0);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  opacity: 0.8;
+}
+
+.author-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.bottom h1 {
+  display: inline-block;
+  font-size: 2.5em;
+  position: relative;
+  margin-bottom: 0.3em;
+}
+
+.bottom h1::after {
+  position: absolute;
+  content: "";
+  bottom: -0.2em;
+  left: -2rem;
+  width: calc(100% + 2rem);
+  height: 0.1em;
+  background-color: #8aeef1;
+  transform: scaleX(0);
+  transition: transform 600ms ease;
+  transform-origin: right;
+}
+
+.bottom:hover h1::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text p {
+  font-weight: 100;
+  margin: 10px;
+  font-size: 1.3vw;
+  color: #d9d9d9;
+  font-family: "Roboto", sans-serif;
+}
+
+.text button {
+  font-size: 0.8em;
+  padding: 0.5em 0.8em;
+  margin-top: 3px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: rgba(0 0 0/ 0.8);
+  background-color: #8aeef1;
+}
+
+.text button:hover {
+  cursor: pointer;
+  color: #fff;
+  background-color: #4a7e80;
+}
+.align {
+  position: relative;
+  left: 5vw;
+  font-size: 8vh;
+  font-family: "Poppins", sans-serif;
+  color: #495057;
+  top: 12px;
+}
+@media all and (max-width: 600px) {
+  .info-detail {
+    flex-direction: column;
+  }
+  .tempo {
+    margin-top: -10vh;
+    width: 80vw;
+  }
+}

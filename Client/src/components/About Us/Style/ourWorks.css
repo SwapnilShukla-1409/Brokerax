@@ -1,0 +1,38 @@
+.OurWorks-conatiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f8f8;
+  margin-top: 10vh;
+  height: 80vh;
+  font-family: "Roboto", sans-serif;
+}
+.row {
+  justify-content: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+.ourWorks-img img {
+  height: 70vh;
+}
+.heading-sm-lead,
+.heading-section {
+  text-align: center;
+}
+.heading-sm-lead {
+  margin-bottom: 5vh;
+}
+.work-logo {
+  color: white;
+  width: 4vw;
+  text-align: center;
+}
+.icon-box {
+  background-color: green;
+  border-radius: 50%;
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

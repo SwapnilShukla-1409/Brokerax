@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+.container {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.addonHome {
+  display: flex;
+}
+.addonHome h3 {
+  font-family: "Poppins", sans-serif;
+}
+.logo-addon {
+  padding: 20px;
+}
+.secrow p,
+.fstrow p {
+  color: black;
+  font-size: 1.3vw;
+  font-family: "Roboto", sans-serif;
+}
+.addonHome a {
+  color: #adb5bd;
+}
+.addonHome a:hover {
+  color: black;
+  text-decoration: none;
+}
+.fstrow {
+  display: flex;
+}
+.secrow {
+  display: flex;
+  margin-top: 4vh;
+}
+@media all and (max-width: 600px) {
+  .fstrow {
+    flex-direction: column;
+  }
+  .secrow {
+    margin-top: -0.5vh;
+    flex-direction: column;
+  }
+  .addonHome {
+    align-items: center;
+  }
+.addonHome p {
+  font-size: 2vw;
+}
+}
