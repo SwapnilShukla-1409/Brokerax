@@ -1,32 +1,36 @@
 import React from "react";
-
 import "./coins.css";
 
 const CoinItem = (props) => {
-  const price = props.coins.current_price;
+  const c = props.coins || {};
+  const price = typeof c.current_price === "number" ? c.current_price : null;
+  const pct = typeof c.price_change_percentage_24h === "number" ? c.price_change_percentage_24h : null;
+  const totalVol = typeof c.total_volume === "number" ? c.total_volume : null;
+  const marketCap = typeof c.market_cap === "number" ? c.market_cap : null;
+  const rank = c.market_cap_rank != null ? c.market_cap_rank : "-";
+
   return (
     <div className="coin-row">
-      <p>{props.coins.market_cap_rank}</p>
+      <p>{rank}</p>
       <div className="img-symbol">
-        <img src={props.coins.image} alt="" />
-        <p>{props.coins.symbol.toUpperCase()}</p>
+        {c.image ? <img src={c.image} alt="" /> : <div style={{ width: 24, height: 24 }} />}
+        <p>{(c.symbol || "").toUpperCase()}</p>
       </div>
-      <p>₹{props.coins.current_price.toFixed(1)}</p>
-      {props.coins.price_change_percentage_24h.toFixed(2) < 0 ? (
-        <p className="coin-percent red">
-          {props.coins.price_change_percentage_24h.toFixed(2)}%
-        </p>
+
+      <p>₹{price !== null ? price.toFixed(1) : "-"}</p>
+
+      {pct !== null ? (
+        pct < 0 ? (
+          <p className="coin-percent red">{pct.toFixed(2)}%</p>
+        ) : (
+          <p className="coin-percent green">{pct.toFixed(2)}%</p>
+        )
       ) : (
-        <p className="coin-percent green">
-          {props.coins.price_change_percentage_24h.toFixed(2)}%
-        </p>
+        <p className="coin-percent">-</p>
       )}
-      <p className="hide-mobile">
-        ₹{props.coins.total_volume.toLocaleString()}
-      </p>
-      <p className="hide-mobile">
-        ₹{props.coins.market_cap.toLocaleString()}
-      </p>
+
+      <p className="hide-mobile">₹{totalVol !== null ? totalVol.toLocaleString() : "-"}</p>
+      <p className="hide-mobile">₹{marketCap !== null ? marketCap.toLocaleString() : "-"}</p>
     </div>
   );
 };
